@@ -51,9 +51,6 @@ namespace lab_5.Views
         private async void RegClickButton(object sender, RoutedEventArgs e)
         {
             string? str=await new Regex().ShowDialog<string?>((Window)this.VisualRoot);
-           // var context = this.DataContext as MainWindowViewModel;
-            //if (flag == 1)
-               //context.TreatmentRegex();
              if (str!=null)
              {
                  var context = this.DataContext as MainWindowViewModel;

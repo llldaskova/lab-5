@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:lab_5.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="450"
+        x:Class="lab_5.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Regex"  Height="450" Width="300">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    <Grid>
+	<Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.10*"></RowDefinition>
+            <RowDefinition  Height="0.10*"></RowDefinition>
+    </Grid.RowDefinitions>
+	<Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+     </Grid.ColumnDefinitions>
+	
+		
+<Button Name="SaveFile" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="1"   >Save file</Button>
+<Button Name="OpenFile" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1"   >Open file</Button>
+<Button Name="SetRegex" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Click="RegClickButton" >Set Regex</Button>
+
+<TextBox   AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding InputText}"  Grid.Column="0" Grid.Row="0"/>
+<TextBox Text="{Binding OutputText}" Focusable="False" AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="1" Grid.Row="0"  />
+     </Grid>
+</Window>
